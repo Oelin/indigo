@@ -1,6 +1,6 @@
 # indigo
 
-Indigo is a 165 byte implementation of observables. An observable is a variable which notifies you whenever its value changes. Here's a simple example
+Indigo is a 165 byte implementation of observables. An observable is a variable which notifies subscribers of value changes. Here's a simple example
 
 ```js
 import { use } from 'indigo'
