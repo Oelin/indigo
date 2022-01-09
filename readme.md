@@ -7,7 +7,7 @@ import { use } from 'indigo'
 
 // create a new observable
 
-const name = observe('Alice')
+const name = use('Alice')
 
 // subscribe to changes
 
