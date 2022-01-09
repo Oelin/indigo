@@ -3,7 +3,7 @@
 Indigo is a 165 byte implementation of observables. An observable is a variable which notifies you whenever its value changes. Here's a simple example
 
 ```js
-import { observe } from 'indigo'
+import { use } from 'indigo'
 
 // create a new observable
 
@@ -27,7 +27,7 @@ name('Sam') // set to a different value
 
 ## API
 
-### `indigo.observe( value )`
+### `indigo.use( value )`
 
 Creates a new observable who's value is initially set to `value`.
 
@@ -35,14 +35,22 @@ Creates a new observable who's value is initially set to `value`.
 * returns `Observable`
 
 
-### `Observable ( value )`
+### `indigo.using( dependencies..., function)`
+
+Creates a new observable who's value is the result of `function()`. If an observable in `dependencies` changes, the new observable will change too and notify any subscribers.
+
+* dependencies : `Array<Observable>` (splash argument)
+* function : `Function`
+
+
+### `Observable( value )`
 
 Changes an observable's value. All subscribers are notified about the change.
 
 * value: `Object`
 * returns nothing
 
-### `Observable ()`
+### `Observable()`
 
 Returns an observable's current value.
 
