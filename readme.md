@@ -1,6 +1,6 @@
 # indigo
 
-Indigo is a 170 byte implementation of observables. An observable is a variable which notifies subscribers of value changes. Here's a simple example
+Indigo is a 165 byte implementation of observables. An observable is a variable which notifies subscribers of value changes. Here's a simple example
 
 ```js
 import { use } from 'indigo'
@@ -27,7 +27,7 @@ name('Sam') // set to a different value
 
 ## API
 
-### `indigo.use( value )`
+#### `indigo.use( value )`
 
 Creates a new observable who's value is initially set to `value`.
 
@@ -35,7 +35,7 @@ Creates a new observable who's value is initially set to `value`.
 * returns `Observable`
 
 
-### `indigo.using( dependencies..., function)`
+#### `indigo.using( dependencies..., function)`
 
 Creates a new observable who's value is the result of `function()`. If an observable in `dependencies` changes, the new observable will change too and notify any subscribers.
 
@@ -43,14 +43,14 @@ Creates a new observable who's value is the result of `function()`. If an observ
 * function : `Function`
 
 
-### `Observable()`
+#### `Observable()`
 
 Returns an observable's current value.
 
 * returns `Object`
 
 
-### `Observable( value )`
+#### `Observable( value )`
 
 Changes an observable's value. All subscribers are notified about the change.
 
@@ -58,7 +58,7 @@ Changes an observable's value. All subscribers are notified about the change.
 * returns nothing
 
 
-### `Observable.on( function )`
+#### `Observable.on( function )`
 
 Subscribes a function to an observable. Whenever the observable's value changes, `function` will be called with the new value.
 
